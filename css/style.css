@@ -1,0 +1,82 @@
+body{
+    font-size: 16px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-main{
+    padding:0;
+}
+.Logo {
+    height: 35px;
+    margin:5px 10px 5px 10px;
+}
+.create_contact{
+    border-radius: 20px;
+    margin-left: 10px;
+    padding: 5px 20px 5px 14px;
+    border: 1px solid grey;
+}
+.create_contact svg{
+    height: 30px;
+    position: relative;
+    left:0;
+}
+.create_contact:focus, .create_contact:hover{
+    background-color: #e8f0fe;
+    border: 1px solid lightgrey;
+    color:black;
+    box-shadow: 0 1px 6px 1px lightgray; 
+}
+.Navigation, .Content{
+    float: left;
+}
+.Content{
+    margin-top:100px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.Content h1{
+    font-family: 'Montserrat', sans-serif;
+}
+.Navigation table{
+    margin-top: 20px;
+    width: 100%;
+}
+.Navigation table td{
+    padding: 2px 2px 2px 20px;
+}
+.Navigation table td i
+{
+    color:#616161;
+}
+.nav{
+    padding: 5px;
+    border-bottom-right-radius:20px ;
+    border-top-right-radius:20px ;
+}
+.nav td{
+    margin: 5px 0px 5px 0px ;
+}
+.nav:hover{
+    background-color: #e8f0fe;
+    cursor: pointer;
+}
+.nav a{
+    padding: 0px 80px 0px 0px ;
+    text-decoration: none;
+    color: black;
+}
+.nav span{
+    margin-left: 8px;
+}
+.dropdown-menu.show{
+    transform: translate(210px, 4px)!important;
+}
+.contact-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.total{
+    float: right;
+}
