@@ -15,6 +15,9 @@ if (!empty($_REQUEST['rid'])) {
     $id = $_REQUEST['rid'];
     $obj->restore($id);
 }
+if (!empty($_REQUEST['deleteall'])) {
+    $obj->dall();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +39,9 @@ if (!empty($_REQUEST['rid'])) {
         </div>
         <div class="col-md-10 Content">
             <div class="col-md-10">
-
+                <div class="col-md-12">
+                    <a role="button" class="btn btn-danger dall" href="Trash.php?deleteall=true">Delete All</a>
+                </div>
                 <table class="table">
                     <thead>
                         <tr>

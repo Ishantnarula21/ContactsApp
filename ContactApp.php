@@ -40,7 +40,6 @@ class ContactApp
             if (!empty($image)) {
                 $filename = $this->con->real_escape_string($_FILES['image']['name']);
                 $filepath = $_FILES['image']['tmp_name'];
-                echo $filepath;
                 //exploding extention from file name
                 $imagename = explode(".", $filename);
                 $ext = $imagename[1];
@@ -89,7 +88,6 @@ class ContactApp
         if (!empty($image)) {
             $filename = $this->con->real_escape_string($_FILES['image']['name']);
             $filepath = $_FILES['image']['tmp_name'];
-            echo $filepath;
             //exploding extention from file name
             $imagename = explode(".", $filename);
             $ext = $imagename[1];
@@ -100,7 +98,7 @@ class ContactApp
             $row = $result->fetch_assoc();
             $id = $row['Auto_increment'];
             $newfilename = $id . "." . $ext;
-            $query = "select image from fp where id=$uid";
+            $query = "select image from allcontacts where id=$uid";
             $result = $this->con->query($query);
             $getimage = $result->fetch_assoc();
             if ($result == true) {
@@ -274,6 +272,17 @@ class ContactApp
             }
         } else {
             echo "Contact Not Restored";
+        }
+    }
+    //delete all
+    public function dall()
+    {
+        $query = "truncate trash";
+        $result = $this->con->query($query);
+        if ($result == true) {
+            echo "Trash Is Empty Now";
+        } else {
+            echo "Trash cant be empty";
         }
     }
 }

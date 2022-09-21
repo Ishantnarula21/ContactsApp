@@ -61,8 +61,18 @@ if (isset($_REQUEST['update'])) {
                         <label for="image" class="form-label">Image (optional)</label>
                         <input type="file" class="form-control" id="image" name="image">
                     </div>
-                    <input type="submit" class="btn btn-primary" name="save" value="Save" />
-                    <input type="submit" class="btn btn-success" name="update" value="Update" />
+                    <?php
+                    if (!empty($_REQUEST['eid'])) {
+                    ?>
+
+                        <input type="submit" class="btn btn-success" name="update" value="Update" />
+                    <?php
+                    } else {
+                    ?>
+                        <input type="submit" class="btn btn-primary" name="save" value="Save" />
+                    <?php
+                    }
+                    ?>
                     <a class="btn btn-warning" role="button" href="CreateNewContact.php">Reset</a>
                 </form>
             </div>
